@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+{% if username %}
+<h1>Hello, {{ username }}!</h1>
+{% else %}
+<h1>Hello, World!</h1>
+{% endif %}
+<form action="{{ url_for('name') }}" method="post">
+<p>
+username:
+<input type="text" name="username" required>
+</p>
+<p><button>go</button></p>
+</form>
+</body>
+</html>
